@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CountriesComponent } from './countries/countries.component';
 import { UnitedStatesComponent } from './united-states/united-states.component';
-import { TimelineComponent } from './timeline/timeline.component';
 import { CountryTimelineComponent } from './country-timeline/country-timeline.component';
 import { StatesComponent } from './states/states.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,7 +19,6 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CountriesComponent,
     UnitedStatesComponent,
-    TimelineComponent,
     CountryTimelineComponent,
     StatesComponent,
     FooterComponent

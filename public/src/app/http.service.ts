@@ -24,10 +24,6 @@ export class HttpService {
   getStatesData(){
     return this._http.get("https://covidtracking.com/api/states")
   }
-  
-  // getUSTimeline(){
-  //   return this._http.get("https://api.covid19api.com/live/country/united-states/status/confirmed/date/2020-03-21T13:13:30Z")
-  // }
 
   getUSTimeline(){
     return this._http.get("https://covidtracking.com/api/us/daily")

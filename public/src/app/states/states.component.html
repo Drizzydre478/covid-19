@@ -1,5 +1,5 @@
 <div>
-        <button (click)="onClick()">Refresh</button>
+        <button (click)="onClick()">Home</button>
         <h1>States Data</h1>
         <div *ngIf="statesData">
             <table class="table table-dark">
@@ -7,9 +7,9 @@
                     <th>State</th>
                     <th>Total Test Cases</th>
                     <th>Total Positive Test Cases</th>
-                    <th>Total Recovered</th>
                     <th>Total Negative Test Cases</th>
                     <th>Total Hospitalized</th>
+                    <th>Total Recovered</th>
                     <th>Total Deaths </th>
                     <td>Last Updated</td>
                     <td>Grade</td>
@@ -18,11 +18,11 @@
                     <td>{{data.state}}</td>
                     <td>{{data.totalTestResults}}</td>
                     <td>{{data.positive}}</td>
-                    <td>{{data.recovered}}</td>
                     <td>{{data.negative}}</td>
                     <td>{{data.hospitalized}}</td>
+                    <td>{{data.recovered}}</td>
                     <td>{{data.death}}</td>
-                    <td>{{data.lastUpdateEt}}</td>
+                    <td>{{data.lastUpdated}}</td>
                     <td>{{data.grade}}</td>
                 </tr>
             </table>

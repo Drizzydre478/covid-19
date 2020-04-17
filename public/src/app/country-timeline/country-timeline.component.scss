@@ -3,8 +3,28 @@ h1{
     color: white;
 }
 
-.chart{
+#myChart{
     height:700px;
-    width: 1000px;
-    outline: solid 1px salmon;
+    width: 1250px;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 70px;
+    
 }
+
+.chartBG{
+    background-color: rgba(0, 0, 28, 0.605);
+    width: 1250px;
+}
+
+body{
+    height: 100%;
+}
+
+button{
+    color: white;
+    background-color: #a4a486;
+    margin-left: -175px;
+}
+
+

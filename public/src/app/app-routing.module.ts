@@ -5,7 +5,6 @@ import { GlobalComponent } from './global/global.component';
 import { HomeComponent } from './home/home.component';
 import { CountriesComponent } from './countries/countries.component';
 import { UnitedStatesComponent } from './united-states/united-states.component';
-import { TimelineComponent } from './timeline/timeline.component';
 import { CountryTimelineComponent } from './country-timeline/country-timeline.component';
 import { StatesComponent } from './states/states.component';
 
@@ -15,7 +14,6 @@ const routes: Routes = [
   {path: 'global', component: GlobalComponent},
   {path: 'countries', component: CountriesComponent},
   {path: 'US', component: UnitedStatesComponent},
-  {path: 'timeline', component: TimelineComponent},
   {path: 'US_timeline', component: CountryTimelineComponent},
   {path: 'states', component: StatesComponent},
 ];

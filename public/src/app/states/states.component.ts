@@ -27,6 +27,6 @@ export class StatesComponent implements OnInit {
   }
 
   onClick(){
-    this._router.navigate(["/states"]);
+    this._router.navigate(["/"]);
   }
 }

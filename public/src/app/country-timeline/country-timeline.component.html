@@ -8,80 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <button (click)="onClick()">Refresh</button>
-    <h1>US Timeline</h1>
-
-    <div class="chart">
+    <button (click)="onClick()">Home</button>
+    <div class="chartBG">
+        <h1>US Timeline 2020</h1>
         <canvas id="myChart"></canvas>
     </div>
-
-    <script>
-        const xLabels = [];
-        const yNumbers = [];
-
-
-        chartIt();
-        async function chartIt(){
-        await getData();
-        let myChart = document.getElementById('myChart').getContext('2d');
-        let covidDataChart = new Chart(myChart, {
-            type: 'line', //bar, horitzontalBar, pie, line, doughnut, radar, polarArea
-            data: {
-                labels: xLabels,
-                datasets:[{
-                    label:['COVID-19 TIMELINE'],
-                    data: yNumbers,
-                    fill: false,
-                    backgroundColor:[
-                        'rgba(255, 99, 132, 0.6)',
-                        // 'rgba(54, 162, 235, 0.6)',
-                        // 'rgba(255, 206, 86, 0.6)',
-                        // 'rgba(75, 192, 192, 0.6)',
-                    ],
-                }]
-            },
-            
-            options: {}
-        })
-    }
-
-    async function getData(){
-        const response = await fetch("https://covidtracking.com/api/us/daily.csv");
-        const data = await response.text();
-        const rows = data.split("\n").slice(1);
-        rows.forEach(row => {
-            const columns = row.split(',');
-            const dates = columns[0];
-            xLabels.push(dates);
-            console.log(columns)
-            const data = columns[2];
-            yNumbers.push(data)
-
-        });
-    }
-    </script>
-
-
 </body>
 </html>
-
-<!-- 
-    <div *ngIf="usTimeline">
-        <table class="table table-success">
-            <tr>
-                <th>State/Province</th>
-                <th>Date</th>
-                <th>Recovered</th>
-                <th>Active</th>
-                <th>Total Deaths</th>
-            </tr>
-            <tr *ngFor="let data of usTimeline">
-                <td>{{data.states}}</td>
-                <td>{{data.date}}</td>
-                <td>{{data.recovered}}</td>
-                <td>{{data.positive}}</td>
-                <td>{{data.death}}</td>
-            </tr>
-        </table>
-    </div> -->
-        

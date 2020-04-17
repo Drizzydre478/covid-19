@@ -28,6 +28,6 @@ export class UnitedStatesComponent implements OnInit {
   }
 
   onClick(){
-    this._router.navigate(["/US"]);
+    this._router.navigate(["/"]);
   }
 }
