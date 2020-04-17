@@ -1,0 +1,28 @@
+<div>
+    <button (click)="onClick()">Refresh</button>
+    <h1>Countries Statistics</h1>
+    <div *ngIf="countriesData">
+        <table class="table table-success">
+            <tr>
+                <th>Country</th>
+                <th>Total Cases</th>
+                <th>Total Recovered</th>
+                <th>Total Unresolved</th>
+                <th>Total Deaths Today</th>
+                <th>Total New Cases Today</th>
+                <th>Total Active</th>
+                <th>Total Serious Cases</th>
+            </tr>
+            <tr *ngFor="let data of countriesData.countryitems[0] | keyvalue">
+                <td>{{data.value.title}}</td>
+                <td>{{data.value.total_cases}}</td>
+                <td>{{data.value.total_recovered}}</td>
+                <td>{{data.value.total_unresolved}}</td>
+                <td>{{data.value.total_deaths}}</td>
+                <td>{{data.value.total_new_cases_today}}</td>
+                <td>{{data.value.total_new_deaths_today}}</td>
+                <td>{{data.value.total_serious_cases}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div>
+        <button (click)="onClick()">Refresh</button>
+        <h1>Global Data</h1>
+    <div *ngIf="globalData">
+        <table class="table table-success">
+            <tr>
+                <th>Total Cases</th>
+                <th>Total Recovered</th>
+                <th>Total Unresolved</th>
+                <th>Total Deaths Today</th>
+                <th>Total New Cases Today</th>
+                <th>Total Active</th>
+                <th>Total Serious Cases</th>
+                <th>Total Affected Countries</th>
+            </tr>
+            <tr>
+                <td>{{globalData.results[0].total_cases}}</td>
+                <td>{{globalData.results[0].total_recovered}}</td>
+                <td>{{globalData.results[0].total_unresolved}}</td>
+                <td>{{globalData.results[0].total_deaths}}</td>
+                <td>{{globalData.results[0].total_new_cases_today}}</td>
+                <td>{{globalData.results[0].total_new_deaths_today}}</td>
+                <td>{{globalData.results[0].total_serious_cases}}</td>
+                <td>{{globalData.results[0].total_affected_countries}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

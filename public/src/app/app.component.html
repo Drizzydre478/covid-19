@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>COVID-19 DATA</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-secondary">
+            <h1>Coronavirus Information</h1>
+            <a [routerLink]="['/global']">Global Statistics</a> | <a [routerLink]="['/countries']">Countries Statistics</a> | <a [routerLink]="['/US']">United States Statistics</a> | <a [routerLink]="['/states']">States Statistics</a> | <a [routerLink]="['/US_timeline']">US Timeline</a>
+        </div>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+      </div>
+</body>
+</html>
