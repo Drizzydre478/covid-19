@@ -4,13 +4,13 @@
     <div *ngIf="countries">
         <table class="table table-success">
             <tr>
-                <th>Country</th>
-                <th>Total Cases</th>
-                <th>Total Serious Cases</th>
-                <th>Total Recovered</th>
-                <th>Total Deaths</th>
-                <th>Total New Cases Today</th>
-                <th>Total New Deaths Today</th>
+                <th class="header">Country</th>
+                <th class="header">Total Cases</th>
+                <th class="header">Total Serious Cases</th>
+                <th class="header">Total Recovered</th>
+                <th class="header">Total Deaths</th>
+                <th class="header">Total New Cases Today</th>
+                <th class="header">Total New Deaths Today</th>
             </tr>
             <tr *ngFor="let country of countries">
                 <td>{{country.title}}</td>

@@ -6,6 +6,11 @@
     background-color: rgba(0, 0, 28, 0.509);
     color: #a4a486;
     font-size: 22px;
+    .header{
+        position: sticky;
+        top:0;
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 h1{

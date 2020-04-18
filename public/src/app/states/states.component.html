@@ -4,15 +4,15 @@
         <div *ngIf="statesData">
             <table class="table table-dark">
                 <tr>
-                    <th>State</th>
-                    <th>Total Test Cases</th>
-                    <th>Total Positive Test Cases</th>
-                    <th>Total Negative Test Cases</th>
-                    <th>Total Hospitalized</th>
-                    <th>Total Recovered</th>
-                    <th>Total Deaths </th>
-                    <td>Last Updated</td>
-                    <td>Grade</td>
+                    <th class="header">State</th>
+                    <th class="header">Total Test Cases</th>
+                    <th class="header">Total Positive Test Cases</th>
+                    <th class="header">Total Negative Test Cases</th>
+                    <th class="header">Total Hospitalized</th>
+                    <th class="header">Total Recovered</th>
+                    <th class="header">Total Deaths </th>
+                    <td class="header">Last Updated</td>
+                    <td class="header">Grade</td>
                 </tr>
                 <tr *ngFor="let data of statesData">
                     <td>{{data.state}}</td>
@@ -22,7 +22,7 @@
                     <td>{{data.hospitalized}}</td>
                     <td>{{data.recovered}}</td>
                     <td>{{data.death}}</td>
-                    <td>{{data.lastUpdated}}</td>
+                    <td>{{data.lastUpdateEt}}</td>
                     <td>{{data.grade}}</td>
                 </tr>
             </table>
