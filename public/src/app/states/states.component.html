@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
 <div>
         <button (click)="onClick()">Home</button>
         <h1>States Data</h1>
@@ -12,7 +21,6 @@
                     <th class="header">Total Recovered</th>
                     <th class="header">Total Deaths </th>
                     <td class="header">Last Updated</td>
-                    <td class="header">Grade</td>
                 </tr>
                 <tr *ngFor="let data of statesData">
                     <td>{{data.state}}</td>
@@ -23,9 +31,8 @@
                     <td>{{data.recovered}}</td>
                     <td>{{data.death}}</td>
                     <td>{{data.lastUpdateEt}}</td>
-                    <td>{{data.grade}}</td>
                 </tr>
             </table>
         </div>
     </div>
-    
+</html>

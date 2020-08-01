@@ -11,7 +11,6 @@ import {Chart} from 'chart.js';
 export class CountryTimelineComponent implements OnInit {
 
   myChart: any;
-  chart2: any;
   constructor(
     private elementRef: ElementRef,
     private _http: HttpService,
@@ -30,7 +29,7 @@ export class CountryTimelineComponent implements OnInit {
         async function chartIt(){
         await getData();
         this.myChart = new Chart("myChart", {
-            type: 'line', //bar, horitzontalBar, pie, line, doughnut, radar, polarArea
+            type: 'line', 
             data: {
                 labels: xLabels,
                 datasets:[{
@@ -62,12 +61,15 @@ export class CountryTimelineComponent implements OnInit {
                         ticks: {
                             fontColor: 'white',
                             fontSize: 18,
+                            min: "20200120"
                         },
                         type: "time",
+                        display: true,
                         time: {
-                            dispalyFormats: {
+                            displayFormats: {
                                 week: 'MM DD'
-                            }
+                            },
+                            
                         }
                     }],
                     yAxes: [{
@@ -84,7 +86,7 @@ export class CountryTimelineComponent implements OnInit {
         })
     };
     async function getData(){
-        const response = await fetch("https://covidtracking.com/api/us/daily.csv");
+        const response = await fetch("https://covidtracking.com/api/v1/us/daily.csv");
         const data = await response.text();
         const rows = data.split("\n").slice(1);
         console.log(data)
